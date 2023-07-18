@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="SiYourtraveldottv" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0 " />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Travel Dot</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- This is the ID -->
+    <div id="root"></div>
+
+
+
+
+      <script type="text/javascript">
+        (function (d, s, id) {
+          var js,
+            el = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) {
+            return;
+          }
+          js = d.createElement(s);
+          js.async = true;
+          js.src = 'https://s3.ap-south-1.amazonaws.com/conferbot.defaults/dist/v1/widget.min.js';
+          js.id = id;
+          js.charset = 'UTF-8';
+          el.parentNode.insertBefore(js, el);
+          // Initializes the widget when the script is ready
+          js.onload = function () {
+              var w = window.ConferbotWidget("64a3bef43b98f3224beef15f", "live_chat");
+          };
+        })(document, 'script', 'conferbot-js');
+      
+     
+
+
+
+  function search(){
+    
+    var src = $('#src').val().trim().toLowerCase();
+    var des = $('#des').val().trim().toLowerCase();
+    var no = $('#persons').val();
+    var day = $('#days').val();
+    var match = [
+    ['salem','tajmahal',9999],
+    ['salem','munnar',5999],
+    ['salem','redfort',10999],
+    ['salem','mysore palace',5499],
+    ['salem','charminar',4999],
+    ['salem','gateway of india',6499],
+    ['salem','ladakh',7999],
+    ['salem','baga beach',6999],
+    ['salem','ooty',3999],
+    ['salem','kodikanal',4999],
+    ['salem','shimla',10999],
+    ['salem','tanjore',2999],
+    ['salem','tirupati',3999],
+    ['salem','kedarnath',14999],
+    ['salem','kovalam',4599],
+    ['salem','varkala',4599],
+    ['salem','radhanagar',14999],
+    ['erode','tajmahal',9899],
+    ['erode','munnar',5899],
+    ['erode','redfort',10199],
+    ['erode','mysore palace',5599],
+    ['erode','charminar',4899],
+    ['erode','gateway of india',6599],
+    ['erode','ladakh',6299],
+    ['erode','baga beach',7399],
+    ['erode','ooty',3899],
+    ['erode','kodikanal;',5199],
+    ['erode','shimla',11999],
+    ['erode','tanjore',2899],
+    ['erode','tirupati',4899],
+    ['erode','kedarnath',15999],
+    ['erode','kovalam',4599],
+    ['erode','varkala',4599],
+    ['erode','radhanagar',15999],
+    ['chennai','tajmahal',8999],
+    ['chennai','munnar',4999],
+    ['chennai','redfort',9999],
+    ['chennai','mysore palace',5999],
+    ['chennai','charminar',3999],
+    ['chennai','gateway of india',5999],
+    ['chennai','ladakh',7999],
+    ['chennai','baga beach',7599],
+    ['chennai','ooty',4999],
+    ['chennai','kodikanal;',5999],
+    ['chennai','shimla',10899],
+    ['chennai','tanjore',3999],
+    ['chennai','tirupati',2999],
+    ['chennai','kedarnath',13999],
+    ['chennai','kovalam',5999],
+    ['chennai','varkala',5799],
+    ['chennai','radhanagar',14799],
+    ['hyderabad','tajmahal',7999],
+    ['hyderabad','munnar',5999],
+    ['hyderabad','redfort',9899],
+    ['hyderabad','mysore palace',5499],
+    ['hyderabad','charminar',500],
+    ['hyderabad','gateway of india',5999],
+    ['hyderabad','ladakh',7999],
+    ['hyderabad','baga beach',7599],
+    ['hyderabad','ooty',5999],
+    ['hyderabad','kodikanal',6999],
+    ['hyderabad','shimla',10599],
+    ['hyderabad','tanjore',4799],
+    ['hyderabad','tirupati',1999],
+    ['hyderabad','kedarnath',14000],
+    ['hyderabad','kovalam',4899],
+    ['hyderabad','varkala',5999],
+    ['hyderabad','radhanagar',16999],
+    ['bengaluru','tajmahal',6999],
+    ['bengaluru','munnar',5499],
+    ['bengaluru','redfort',9999],
+    ['bengaluru','mysore palace',500],
+    ['bengaluru','charminar',2599],
+    ['bengaluru','gateway of india',5999],
+    ['bengaluru','ladakh',7899],
+    ['bengaluru','baga beach',7899],
+    ['bengaluru','tanjore',7999],
+    ['bengaluru','tirupati',3999],
+    ['bengaluru','kedarnath',14699],
+    ['bengaluru','kovalam',4899],
+    ['bengaluru','varkala',5999],
+    ['bengaluru','radhanagar',16999],
+    ['bengaluru','ooty',3999],
+    ['bengaluru','kodikanal',6999],
+    ['bengaluru','shimla',11999],
+    ['mumbai','tajmahal',5999],
+    ['mumbai','munnar',5499],
+    ['mumbai','redfort',8999],
+    ['mumbai','mysore palace',3500],
+    ['mumbai','charminar',3599],
+    ['mumbai','gateway of india',500],
+    ['mumbai','ladakh',6899],
+    ['mumbai','baga beach',4999],
+    ['mumbai','ooty',10999],
+    ['mumbai','kodikanal',10699],
+    ['mumbai','shimla',10199],
+    ['mumbai','tanjore',9999],
+    ['mumbai','tirupati',9999],
+    ['mumbai','kedarnath',10999],
+    ['mumbai','kovalam',9899],
+    ['mumbai','varkala',9999],
+    ['mumbai','radhanagar',14699],
+    ['kolkata','tajmahal',3599],
+    ['kolkata','munnar',8499],
+    ['kolkata','redfort',4500],
+    ['kolkata','mysore palace',7500],
+    ['kolkata','charminar',7599],
+    ['kolkata','gateway of india',6500],
+    ['kolkata','ladakh',8999],
+    ['kolkata','baga beach',8999],
+    ['kolkata','ooty',13999],
+    ['kolkata','kodikanal',14999],
+    ['kolkata','shimla',10999],
+    ['kolkata','tanjore',12999],
+    ['kolkata','tirupati',9999],
+    ['kolkata','kedarnath',14999],
+    ['kolkata','kovalam',14999],
+    ['kolkata','varkala',14599],
+    ['kolkata','radhanagar',16999],
+    ['coimbatore','tajmahal',10599],
+    ['coimbatore','munnar',6499],
+    ['coimbatore','redfort',10500],
+    ['coimbatore','mysore palace',6800],
+    ['coimbatore','charminar',5599],
+    ['coimbatore','gateway of india',7500],
+    ['coimbatore','ladakh',15999],
+    ['coimbatore','baga beach',9999],
+    ['coimbatore','ooty',3999],
+    ['coimbatore','kodikanal',4999],
+    ['coimbatore','shimla',10999],
+    ['coimbatore','tirupati',4999],
+    ['coimbatore','tanjore',3999],
+    ['coimbatore','kedarnath',14999],
+    ['coimbatore','kovalam',4599],
+    ['coimbatore','varkala',4699],
+    ['coimbatore','radhanagar',14799],
+    ['kochi','tajmahal',11599],
+    ['kochi','munnar',2499],
+    ['kochi','redfort',10500],
+    ['kochi','mysore palace',8500],
+    ['kochi','charminar',8599],
+    ['kochi','gateway of india',6500],
+    ['kochi','ladakh',11999],
+    ['kochi','baga beach',10999],
+    ['kochi','ooty',3999],
+    ['kochi','kodikanal',4499],
+    ['kochi','shimla',13999],
+    ['kochi','tanjore',4999],
+    ['kochi','tirupati',5999],
+    ['kochi','kedarnath',15999],
+    ['kochi','kovalam',899],
+    ['kochi','varkala',999],
+    ['kochi','radhanagar',17999],
+    ['madurai','tajmahal',11599],
+    ['madurai','munnar',9499],
+    ['madurai','redfort',10500],
+    ['madurai','mysore palace',7500],
+    ['madurai','charminar',7899],
+    ['madurai','gateway of india',8500],
+    ['madurai','ladakh',15999],
+    ['madurai','baga beach',9999],
+    ['madurai','ooty',4999],
+    ['madurai','kodikanal',4599],
+    ['madurai','shimla',13999],
+    ['madurai','tanjore',2999],
+    ['madurai','tirupati',6999],
+    ['madurai','kedarnath',14699],
+    ['madurai','kovalam',3999],
+    ['madurai','varkala',3699],
+    ['madurai','radhanagar',15999],
+    ['kanyakumari','tajmahal',13599],
+    ['kanyakumari','munnar',9499],
+    ['kanyakumari','redfort',14500],
+    ['kanyakumari','mysore palace',9500],
+    ['kanyakumari','charminar',9599],
+    ['kanyakumari','gateway of india',9999],
+    ['kanyakumari','ladakh',18999],
+    ['kanyakumari','baga beach',10999],
+    ['kanyakumari','ooty',6999],
+    ['kanyakumari','kodikanal;',5999],
+    ['kanyakumari','shimla',17999],
+    ['kanyakumari','tanjore',3999],
+    ['kanyakumari','tirupati',6999],
+    ['kanyakumari','kedarnath',18999],
+    ['kanyakumari','kovalam',4599],
+    ['kanyakumari','varkala',5899],
+    ['kanyakumari','radhanagar',18999],
+    ['goa','tajmahal',8599],
+    ['goa','munnar',9499],
+    ['goa','redfort',4500],
+    ['goa','mysore palace',7500],
+    ['goa','charminar',9599],
+    ['goa','gateway of india',6500],
+    ['goa','ladakh',9999],
+    ['goa','baga beach',500],
+    ['goa','ooty',6999],
+    ['goa','kodikanal;',8999],
+    ['goa','shimla',10599],
+    ['goa','tanjore',7999],
+    ['goa','tirupati',4999],
+    ['goa','kedarnath',15099],
+    ['goa','kovalam',5999],
+    ['goa','varkala',5899],
+    ['goa','radhanagar',17999],
+    ['jaipur','tajmahal',3599],
+    ['jaipur','munnar',18499],
+    ['jaipur','redfort',4500],
+    ['jaipur','mysore palace',10500],
+    ['jaipur','charminar',12599],
+    ['jaipur','gateway of india',9500],
+    ['jaipur','ladakh',9999],
+    ['jaipur','baga beach',8999],
+    ['jaipur','ooty',13999],
+    ['jaipur','kodikanal',14999],
+    ['jaipur','shimla',10599],
+    ['jaipur','tanjore',14999],
+    ['jaipur','tirupati',9999],
+    ['jaipur','kedarnath',10999],
+    ['jaipur','kovalam',14099],
+    ['jaipur','varkala',14599],
+    ['jaipur','radhanagar',20999],
+    ['patna','tajmahal',5599],
+    ['patna','munnar',18499],
+    ['patna','redfort',4599],
+    ['patna','mysore palace',10500],
+    ['patna','charminar',8599],
+    ['patna','gateway of india',9500],
+    ['patna','ladakh',10999],
+    ['patna','baga beach',11999],
+    ['patna','ooty',13999],
+    ['patna','kodikanal',14999],
+    ['patna','shimla',9999],
+    ['patna','tanjore',12999],
+    ['patna','tirupati',8999],
+    ['patna','kedarnath',7999],
+    ['patna','kovalam',10999],
+    ['patna','varkala',10899],
+    ['patna','radhanagar',21999],
+    ['mysore','tajmahal',13599],
+    ['mysore','munnar',8499],
+    ['mysore','redfort',10500],
+    ['mysore','mysore palace',200],
+    ['mysore','charminar',6599],
+    ['mysore','gateway of india',7500],
+    ['mysore','ladakh',13999],
+    ['mysore','baga beach',9999],
+    ['mysore','ooty',3999],
+    ['mysore','kodikanal',4599],
+    ['mysore','shimla',11999],
+    ['mysore','tanjore',7999],
+    ['mysore','tirupati',5999],
+    ['mysore','kedarnath',13999],
+    ['mysore','kovalam',7999],
+    ['mysore','varkala',7899],
+    ['mysore','radhanagar',20999],
+    ['lucknow','tajmahal',3000],
+    ['lucknow','munnar',12599],
+    ['lucknow','redfort',4499],
+    ['lucknow','mysore palace',14500],
+    ['lucknow','charminar',13599],
+    ['lucknow','gateway of india',9500],
+    ['lucknow','ladakh',9999],
+    ['lucknow','baga beach',11999],
+    ['lucknow','ooty',10999],
+    ['lucknow','kodikanal',11999],
+    ['lucknow','shimla',10199],
+    ['lucknow','tanjore',10999],
+    ['lucknow','tirupati',8999],
+    ['lucknow','kedarnath',8999],
+    ['lucknow','kovalam',12999],
+    ['lucknow','varkala',10999],
+    ['lucknow','radhanagar',22999]
+  ];
+    var price;
+    var off;
+    var fa;
+    for (let i=0;i<match.length;i++){
+      console.log("Executed 2");
+      if (match[i][0]== src && match[i][1]==des){
+        price = match[i][2];
+        fa = price + day*(price*0.6) + ((no-1)*price-(price*0.29));
+        fa = Math.round(fa,0);
+        let fp;
+        fp = price + day*(price*0.4) + ((no-1)*price-(price*(no*0.248)))-399;
+        off = Math.round(fp,0);
+        console.log("Executed 2");
+      }
+    }
+
+    console.log(src);
+    console.log(des);
+    console.log(no);
+    $('#heading').empty(); 
+    $('#heading').append(`
+    <div id='heading' class="secIntro heading">
+      <h2  className="secTitle">Search Results</h2>
+    </div>`); 
+    $('#offerlist').empty(); 
+    $('#offerlist').append(`
+    <div class="singleOffer">
+  <div class="destImage">
+    <img src="/static/media/b1.d5c8363816d299e18ddb.jpg" alt="">
+  </div>
+  <div class="offerBody">
+    <div class="price flex">
+      <h2>₹ ${off}  <del style="font-size:15px; color: hsla(0, 0%, 18%, 0.707); text-decoration: line-through; text-decoration-thickness: 0.1rem;">₹ ${fa}</del></h2>
+      <span class="status" style="font-size:15px;">For ${day} days</span>
+    </div>
+    <div class="amenities flex">
+      <div class="singleAmenity flex">
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path></svg>
+        <small>${no} Person</small>
+      </div>
+      
+    </div>
+    <div class="location flex">
+      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+        <path fill="none" d="M0 0h24v24H0z"></path>
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"></path>
+      </svg>
+      <small>${src} to ${des}</small>
+    </div>
+    <button class="btn flex"><a href="/booking">Book </a><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
+      </svg>
+    </button>
+  </div>
+</div>
+    `)
+  }
+  </script>
+
+</body>
+</html>

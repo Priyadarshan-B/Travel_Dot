@@ -1,0 +1,223 @@
+/* Colors */
+:root {
+  --PrimaryColor: #f67009;
+  --HoverColor: hsl(26, 90%, 42%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  /*box-Shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);*/
+}
+
+.popular {
+  padding-top: 10rem;
+}
+.popular .secContainer .secHeader {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.popular .secContainer .secHeader .textDiv .secTitle {
+  color: var(--blackColor);
+  line-height: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+.popular .secContainer .secHeader .textDiv p {
+  font-size: 13px;
+  color: var(--textColor);
+  font-weight: 500;
+}
+.popular .secContainer .secHeader .iconsDiv .cssbuttons-io-button {
+  background: #f67009;
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 1.4em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #714da6;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  width: 7.5em;
+  padding-right: 1rem 3em;
+}
+.popular .secContainer .secHeader .iconsDiv .cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.1em;
+  width: 0em;
+  border-radius: 1.4em;
+  color: #f67009;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #f67009;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+.popular .secContainer .secHeader .iconsDiv .cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.5em);
+}
+.popular .secContainer .secHeader .iconsDiv .cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #7b52b9;
+}
+.popular .secContainer .secHeader .iconsDiv .cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+.popular .secContainer .secHeader .iconsDiv .cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+.popular .secContainer .mainContent {
+  padding: 2rem 0;
+  gap: 1rem;
+}
+.popular .secContainer .mainContent .singleDestination {
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);
+}
+.popular .secContainer .mainContent .singleDestination .destImage {
+  height: 200px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.popular .secContainer .mainContent .singleDestination .destImage img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.popular .secContainer .mainContent .singleDestination .destImage .overlayInfo {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  padding: 0;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(rgba(0, 0, 0, 0.846), rgba(0, 0, 0, 0.759));
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+}
+.popular .secContainer .mainContent .singleDestination .destImage .overlayInfo h3 {
+  color: var(--whiteColor);
+  font-weight: 600;
+}
+.popular .secContainer .mainContent .singleDestination .destImage .overlayInfo p {
+  color: var(--whiteColor);
+  opacity: 0.7;
+  font-size: 13px;
+}
+.popular .secContainer .mainContent .singleDestination .destImage .overlayInfo .icon {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 0.5rem;
+  background: var(--PrimaryColor);
+  font-size: 2.5rem;
+  border-radius: 50%;
+  color: var(--whiteColor);
+  border: 1px solid transparent;
+  transition: 0.3s ease;
+}
+.popular .secContainer .mainContent .singleDestination .destImage .overlayInfo .icon:hover {
+  background: var(--whiteColor);
+  border: 1px solid var(--PrimaryColor);
+  color: var(--PrimaryColor);
+}
+.popular .secContainer .mainContent .singleDestination .destFooter {
+  padding: 1rem;
+}
+.popular .secContainer .mainContent .singleDestination .destFooter .number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--blackColor);
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+}
+.popular .secContainer .mainContent .singleDestination .destFooter .number::after {
+  content: "";
+  position: absolute;
+  background: var(--PrimaryColor);
+  top: 45%;
+  right: -150%;
+  height: 5px;
+  width: 45px;
+  border-radius: 1rem;
+}
+.popular .secContainer .mainContent .singleDestination .destFooter .destText {
+  justify-content: space-between;
+}
+.popular .secContainer .mainContent .singleDestination .destFooter .destText h6 {
+  color: var(--blackColor);
+  font-size: 15px;
+}
+.popular .secContainer .mainContent .singleDestination .destFooter .destText .flex {
+  font-size: 16px;
+  font-weight: 600;
+  align-items: flex-start;
+  transform: translateY(5px);
+}
+.popular .secContainer .mainContent .singleDestination .destFooter .destText .flex .icon {
+  color: var(--PrimaryColor);
+}
+.popular .secContainer .mainContent .singleDestination:hover .overlayInfo {
+  overflow: visible;
+  padding: 1rem 1.5rem;
+  height: 100%;
+}
+
+@media screen and (min-width: 480px) {
+  .popular {
+    padding-top: 10rem;
+  }
+}
+@media screen and (min-width: 556px) {
+  .popular .secHeader {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .popular .secHeader .textDiv {
+    text-align: start;
+    max-width: 70%;
+  }
+  .popular .secHeader .iconsDiv {
+    justify-content: flex-end;
+  }
+}
+@media screen and (min-width: 720px) {
+  .popular {
+    padding-top: 7rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .popular {
+    padding-top: 10rem;
+  }
+  .popular .secContainer .secHeader .textDiv .secTitle {
+    font-size: 2.2rem;
+  }
+  .popular .secContainer .secHeader .textDiv p {
+    font-size: 15px;
+  }
+  .popular .secContainer .mainContent {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}/*# sourceMappingURL=popular.css.map */

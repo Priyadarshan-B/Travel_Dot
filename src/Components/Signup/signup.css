@@ -1,0 +1,180 @@
+/* You can put this CSS code in a separate CSS file or use inline styles */
+:root{
+  --btn-color: #2eae18bb;
+}
+
+
+.d-flex {
+    display: flex;
+  }
+  
+  .justify-content-center {
+    justify-content: center;
+  }
+  
+  .align-items-center {
+    align-items: center;
+  }
+  
+  .bg-secondary {
+    height: 100vh;
+    background-image: url(../../Assests/HI/l1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .bg-white {
+    background-color: #ffffff86;
+    margin: 5rem;
+  }
+  
+  .p-3 {
+    padding: 2.2rem;
+  }
+  
+  .rounded {
+    border-radius: 1rem;
+  }
+  
+  .w-25 {
+    width: 25%;
+  }
+  
+  .h-100 {
+    height: 100vh;
+  }
+  
+  .mb-3 {
+    margin-bottom: 1rem;
+  }
+
+  label{
+    color: #212529ee;
+    font-weight: 500;
+  }
+  
+  .form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #4950578f;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.5rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  select.form-control {
+    height: auto;
+  }
+  
+  .form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .btnsign {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .btn-success {
+    color: #fff;
+    background-color: var(--btn-color);
+  }
+  
+  .btn-success:hover {
+    color: #fff;
+    background-color: var(--btn-color);
+  }
+  
+  .btn-success:focus,
+  .btn-success.focus {
+    color: #fff;
+    background-color: var(--btn-color);
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+  }
+  
+  .btn-success.disabled,
+  .btn-success:disabled {
+    color: #fff;
+    background-color: var(--btn-color);
+  }
+  
+  .btn-success:not(:disabled):not(.disabled):active,
+  .btn-success:not(:disabled):not(.disabled).active,
+  .show > .btn-success.dropdown-toggle {
+    color: #fff;
+    background-color: var(--btn-color);
+  }
+  
+  .btn-success:not(:disabled):not(.disabled):active:focus,
+  .btn-success:not(:disabled):not(.disabled).active:focus,
+  .show > .btn-success.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+  }
+  
+  .btn-success:not(:disabled):not(.disabled):active:hover,
+  .btn-success:not(:disabled):not(.disabled).active:hover,
+  .show > .btn-success.dropdown-toggle:hover {
+    color: #fff;
+    background-color: var(--btn-color);
+  }
+  
+  /* Error message style */
+  .error-message {
+    margin-bottom: 10px;
+    color: red;
+  }
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px; /* Adjust the width as per your preference */
+    max-width: 90%;
+  }
+  
+  
+  .popup button {
+    margin-top: 10px;
+  }
+  
+  .slet{
+    font-size: 14px;
+    color: #21252988;
+  }
+  .password-input {
+    position: relative;
+  }
+  
+  .password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
