@@ -129,7 +129,6 @@ return (
                   <option value="ladakh">ladakh</option>
                   <option value="baga beach">baga beach</option>
                   <option value="ooty">ooty</option>
-                  <option value="kodikanal">kodikanal</option>
                   <option value="shimla">shimla</option>
                   <option value="tanjore">tanjore</option>
                   <option value="tirupati">tirupati</option>

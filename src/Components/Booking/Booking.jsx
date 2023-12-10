@@ -37,7 +37,7 @@ const Signup = () => {
       return;
     }
 
-    emailjs.sendForm('service_gw5p4c1', 'template_won0kmb', form.current, '6fbMjgwjAr98Kv3CJ')
+    emailjs.sendForm('service_vi9jvc6', 'template_cchd6pn', form.current, 'fFzXf-eYq8JUrVPhg')
       .then((result) => {
           console.log(result.text);
       }, (error) => {
@@ -140,7 +140,7 @@ const Signup = () => {
         <label htmlFor="address">Address</label>
         <input type="text" id="address" name="address" placeholder='Your Address'  required onChange={(e)=>setAddress(e.target.value)}  />
       </div>
-      <div className="form-group">
+      {/* <div className="form-group">
         <label htmlFor="person">Person</label>
         <select id="state" name="person" required  onChange={(e)=>setPerson(e.target.value)} >
           <option value="">Select Person</option>
@@ -155,8 +155,8 @@ const Signup = () => {
           <option value="9">9</option>
           <option value="10">10</option>
         </select>
-      </div>
-      <div className="form-group">
+      </div> */}
+     {/*  <div className="form-group">
         <label htmlFor="age">Days</label>
         <select id="state" name="age" required  onChange={(e)=>setAge(e.target.value)} >
           <option value="">Select Days</option>
@@ -166,7 +166,7 @@ const Signup = () => {
           <option value="4">4</option>
           <option value="5">5</option>
         </select>
-      </div>
+      </div> */}
       {/* <div className="form-group">
         <label htmlFor="gender">Gender</label>
         <select id="state" name="gender" required  onChange={(e)=>setGender(e.target.value)} >
